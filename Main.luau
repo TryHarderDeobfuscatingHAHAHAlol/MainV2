@@ -247,9 +247,22 @@ end
 utils.library = loadstring(game:HttpGet("https://raw.githubusercontent.com/TryHarderDeobfuscatingHAHAHAlol/Privatezz/refs/heads/main/GUI%20Library", true))()
 
 utils.HonenxWhite = utils.library:AddWindow("ZenthonLee | Own - " .. utils.greeting(), {
-	main_color = Color3.fromRGB(0, 120, 255),
-	min_size = Vector2.new(500, 500),
-	can_resize = false,
+    title_bar = {
+        Color3.fromRGB(0, 0, 0),
+        Color3.fromRGB(25, 0, 0),
+        Color3.fromRGB(10, 0, 0),
+        Color3.fromRGB(40, 0, 0),
+        Color3.fromRGB(15, 0, 0)
+    },
+    background = {
+        Color3.fromRGB(0, 0, 0),
+        Color3.fromRGB(18, 0, 0),
+        Color3.fromRGB(30, 0, 0)
+    },
+    background_transparency = 0.1,
+    main_color = Color3.fromRGB(180, 0, 255),
+    min_size = Vector2.new(500, 500),
+    can_resize = false,
 })
 
 task.spawn(function()
