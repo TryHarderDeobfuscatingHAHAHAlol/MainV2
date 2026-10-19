@@ -248,8 +248,8 @@ utils.library = loadstring(game:HttpGet("https://raw.githubusercontent.com/TryHa
 
 utils.HonenxWhite = utils.library:AddWindow("ZenthonLee | Own - " .. utils.greeting(), {
 	main_color = Color3.fromRGB(0, 120, 255),
-	min_size = Vector2.new(1000, 1300),
-	can_resize = true,
+	min_size = Vector2.new(500, 500),
+	can_resize = false,
 })
 
 task.spawn(function()
@@ -2360,7 +2360,7 @@ end)
 tabs.farming:AddLabel("Auto Rock:")
 
 tabs.farming.RockData = {
-	Data = {["Tiny Rock - 0 Dura"] = 0, ["Large Rock - 100 Dura"] = 100, ["Punching Rock - 10 Dura"] = 10,
+	Data = {["Hallowed Rock - 0 Dura"] = 0, ["Overcharged Rock - 0 Dura"] = 0, ["Tiny Rock - 0 Dura"] = 0, ["Large Rock - 100 Dura"] = 100, ["Punching Rock - 10 Dura"] = 10,
 		["Golden Rock - 5k Dura"] = 5000, ["Frost Rock - 150k Dura"] = 150000, ["Mythical Rock - 400k Dura"] = 400000,
 		["Eternal Rock - 750k Dura"] = 750000, ["Legend Rock - 1m Dura"] = 1000000, ["Muscle King Rock - 5m Dura"] = 5000000,
 		["Jungle Rock - 10m Dura"] = 10000000, ["Industrial Rock - 25m Dura"] = 25000000,},
@@ -2393,13 +2393,12 @@ tabs.farming.RockSwitch = tabs.farming:AddSwitch("Auto Rock", function(enabled)
 	end
 end)
 
-tabs.farming:AddLabel("Better Strength Farming:")
+tabs.farming:AddLabel("OP Farming:")
 
 tabs.farming.Configs = {
 	{name = "Pushup + Industrial Rock", tool = "Pushups", rock = "Industrial Rock"},
-	{name = "Pushup + Jungle Rock", tool = "Pushups", rock = "Ancient Jungle Rock"},
-	{name = "Pushup + Muscle King Rock", tool = "Pushups", rock = "Muscle King Mountain"},
-	{name = "Pushup + Legends Rock", tool = "Pushups", rock = "Rock Of Legends"}
+	{name = "Pushup + Overcharged Rock", tool = "Pushups", rock = "Overcharged Rock"},
+	{name = "Pushup + Hallowed Rock", tool = "Pushups", rock = "Hallowed Rock"}
 }
 tabs.farming.ActiveConfigs = {}
 
