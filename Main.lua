@@ -1,8 +1,3 @@
---[[
-    HonenxWhite - Ml Main
-    by Honen @𝔥𝔬𝔫𝔢𝔶
-]]
-
 local services = {
 	Players = game:GetService("Players"),
 	ReplicatedStorage = game:GetService("ReplicatedStorage"),
@@ -249,44 +244,9 @@ function utils.toggleSelection(selected, selectedList, value, label, prefix)
 	label.Text = prefix .. (#selectedList > 0 and table.concat(selectedList, ", ") or "None")
 end
 
-function utils.deleteAds()
+utils.library = loadstring(game:HttpGet("https://raw.githubusercontent.com/TryHarderDeobfuscatingHAHAHAlol/Privatezz/refs/heads/main/GUI%20Library", true))()
 
-	-- WHITELIST SYSTEM
-local WhitelistUrl = "https://pastebin.com/raw/0Ne1DxbB"
-
-local whitelistSuccess, whitelist = pcall(function()
-    return loadstring(game:HttpGet(WhitelistUrl))()
-end)
-
-if not whitelistSuccess or type(whitelist) ~= "table" then
-    game:GetService("Players").LocalPlayer:Kick("[HonenxWhite] Error al verificar whitelist")
-    return
-end
-
-if not whitelist[game:GetService("Players").LocalPlayer.UserId] then
-    game:GetService("Players").LocalPlayer:Kick("[HonenxWhite] No estas autorizado")
-    return
-end
-	for _, portal in pairs(game:GetDescendants()) do
-		if portal.Name == "RobloxForwardPortals" then
-			portal:Destroy()
-		end
-	end
-	if _G.ads then
-		_G.ads:Disconnect()
-	end
-
-	_G.ads = game.DescendantAdded:Connect(function(descendant)
-		if descendant.Name == "RobloxForwardPortals" then
-			descendant:Destroy()
-		end
-	end)
-end
-utils.deleteAds()
-
-utils.library = loadstring(game:HttpGet("https://raw.githubusercontent.com/rodriguezberiticajuliocesar-wq/SilenceScripts/refs/heads/main/libraries/eleriumv2.luau?cache=" .. tostring(os.time()), true))()
-
-utils.HonenxWhite = utils.library:AddWindow("HonenxWhite | Main - " .. utils.greeting(), {
+utils.HonenxWhite = utils.library:AddWindow("ZenthonLee | Own - " .. utils.greeting(), {
 	main_color = Color3.fromRGB(0, 120, 255),
 	min_size = Vector2.new(1000, 1300),
 	can_resize = true,
@@ -4323,13 +4283,13 @@ task.spawn(function()
 			if state then
 				game.StarterGui:SetCore("SendNotification", {
 					Title = "Anti-AFK",
-					Text = "✅ Activado",
+					Text = "✅ Enabled",
 					Duration = 3
 				})
 			else
 				game.StarterGui:SetCore("SendNotification", {
 					Title = "Anti-AFK",
-					Text = "❌ Desactivado",
+					Text = "❌ Disabled",
 					Duration = 3
 				})
 			end
